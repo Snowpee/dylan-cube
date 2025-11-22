@@ -1,0 +1,102 @@
+/* Reset and Base */
+body,
+html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: #222;
+    /* Fallback */
+}
+
+#app {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+/* Canvas Background */
+#canvas-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+/* UI Overlay */
+#ui-container {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 280px;
+    z-index: 10;
+    /* Bulma box override for transparency */
+    background-color: rgba(10, 10, 10, 0.8) !important;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    max-height: 90vh;
+    overflow-y: auto;
+}
+
+/* Reset View Button (Floating) */
+#btn-reset-view {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 10;
+    background-color: rgba(10, 10, 10, 0.6) !important;
+    color: white !important;
+    border-color: rgba(255, 255, 255, 0.2) !important;
+}
+
+#btn-reset-view:hover {
+    background-color: rgba(10, 10, 10, 0.9) !important;
+}
+
+/* Bulma Overrides for Dark Theme consistency */
+.select select {
+    background-color: rgba(255, 255, 255, 0.1) !important;
+    color: white !important;
+    border-color: rgba(255, 255, 255, 0.2) !important;
+}
+
+.select select:hover {
+    border-color: rgba(255, 255, 255, 0.4) !important;
+}
+
+.select::after {
+    border-color: white !important;
+}
+
+.label {
+    color: #b5b5b5 !important;
+}
+
+.title {
+    color: white !important;
+}
+
+.subtitle {
+    color: #dbdbdb !important;
+}
+
+/* Custom scrollbar for webkit */
+#ui-container::-webkit-scrollbar {
+    width: 6px;
+}
+
+#ui-container::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.1);
+}
+
+#ui-container::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 3px;
+}
+
+#ui-container::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
